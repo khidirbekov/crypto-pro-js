@@ -1,6 +1,6 @@
 {
 	"name": "crypto-pro-aft",
-	"version": "2.3.5",
+	"version": "2.3.6",
 	"description": "Асинхронный JavaScript API для работы с КриптоПРО ЭЦП Browser Plug-In. Forked from https://github.com/vgoma/crypto-pro",
 	"main": "./lib/crypto-pro-aft.js",
 	"types": "./lib/crypto-pro-aft.d.ts",
@@ -12,12 +12,12 @@
 	"scripts": {
 		"clean": "rimraf dist lib package coverage",
 		"start": "cross-env TS_CONFIG=tsconfig-es5.json webpack --watch",
-		"build:uncompressed:es5": "cross-env TS_CONFIG=tsconfig-es5.json webpack",
-		"build:compressed:es5": "cross-env TS_CONFIG=tsconfig-es5.json NODE_ENV=production webpack",
-		"build:definition-header:es5": "cross-env TS_CONFIG=tsconfig-es5.json node definition-header.js",
+		"build:uncompressed:es5": "cross-env NODE_OPTIONS=--openssl-legacy-provider TS_CONFIG=tsconfig-es5.json webpack",
+		"build:compressed:es5": "cross-env NODE_OPTIONS=--openssl-legacy-provider TS_CONFIG=tsconfig-es5.json NODE_ENV=production webpack",
+		"build:definition-header:es5": "cross-env NODE_OPTIONS=--openssl-legacy-provider TS_CONFIG=tsconfig-es5.json node definition-header.js",
 		"build:es5": "npm run build:uncompressed:es5 && npm run build:compressed:es5 && npm run build:definition-header:es5",
-		"build:uncompressed:esm": "cross-env TS_CONFIG=tsconfig-esm.json webpack",
-		"build:definition-header:esm": "cross-env TS_CONFIG=tsconfig-esm.json node definition-header.js",
+		"build:uncompressed:esm": "cross-env NODE_OPTIONS=--openssl-legacy-provider TS_CONFIG=tsconfig-esm.json webpack",
+		"build:definition-header:esm": "cross-env NODE_OPTIONS=--openssl-legacy-provider TS_CONFIG=tsconfig-esm.json node definition-header.js",
 		"build:esm": "npm run build:uncompressed:esm && npm run build:definition-header:esm",
 		"build": "npm run clean && npm run build:es5 && npm run build:esm",
 		"pack:clean": "cross-env rimraf %npm_package_name%-%npm_package_version%.tgz",
@@ -91,6 +91,6 @@
 		"webpack-cli": "^3.3.12"
 	},
 	"engines": {
-		"node": "~16"
+		"node": ">=16"
 	}
 }
