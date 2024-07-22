@@ -1,6 +1,6 @@
 {
-	"name": "crypto-pro-js",
-	"version": "2.3.3",
+	"name": "crypto-pro.js",
+	"version": "2.3.4",
 	"description": "Асинхронный JavaScript API для работы с КриптоПРО ЭЦП Browser Plug-In. Forked from https://github.com/vgoma/crypto-pro",
 	"main": "./lib/crypto-pro-js.js",
 	"types": "./lib/crypto-pro-js.d.ts",
@@ -33,12 +33,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/webmasterskaya/crypto-pro-js"
+		"url": "https://github.com/khidirbekov/crypto-pro-js"
 	},
 	"author": {
-		"name": "Artem Vasilev",
-		"email": "kern.usr@gmail.com",
-		"url": "https://github.com/kernusr"
+		"name": "Khadzhimurad Khidirbekov",
+		"email": "tacata97@live.com",
+		"url": "https://github.com/khidirbekov"
 	},
 	"contributors": [
 		{
@@ -50,6 +50,11 @@
 			"name": "German Arutyunov",
 			"email": "germanarutyunov@gmail.com",
 			"url": "https://github.com/gaarutyunov"
+		},
+		{
+			"name": "Artem Vasilev",
+			"email": "kern.usr@gmail.com",
+			"url": "https://github.com/kernusr"
 		}
 	],
 	"keywords": [
@@ -57,6 +62,7 @@
 		"cryptopro",
 		"crypto-pro",
 		"crypto-pro-js",
+		"crypto-pro.js",
 		"cades",
 		"КриптоПро",
 		"Крипто ПРО"
